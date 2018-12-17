@@ -108,7 +108,7 @@ public class VaterpolistaTest {
 	public void metoda_setPoeni() throws Exception {
 		instance.setPoeni(10);
 		int poeni = (int) TestUtil.getFieldValue(instance, "poeni");
-		assertEquals("Nakon poziva metode setPoeni(int) sa prosledjenim argumentom \"10\", vrednost atributa pobednik se nije promenila na tu vrednost", 10, poeni);
+		assertEquals("Nakon poziva metode setPoeni(int) sa prosledjenim argumentom \"10\", vrednost atributa poeni se nije promenila na tu vrednost", 10, poeni);
 	}
 	
 	@Test(expected = VaterpoloException.class)
