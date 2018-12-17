@@ -117,7 +117,7 @@ public class VaterpolistaTest {
 	}
 	
 	@Test
-	public void getPoeni() {
+	public void metoda_getPoeni() {
 		int poeni = (int) TestUtil.getFieldValue(instance, "poeni");
 		
 		assertEquals("Metoda getPoeni() ne vraca vrednost atributa poeni", poeni, instance.getPoeni());
