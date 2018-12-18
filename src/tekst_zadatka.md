@@ -13,6 +13,6 @@ Napraviti javnu klasu **Vaterpolista** u paketu **vaterpolo** koja ima:
 
 Napraviti javnu klasu **VaterpoloUtakmica** u paketu **vaterpolo** koja ima:
 - Privatni atribut **vaterpolisti** koji je lista objekata klase **Vaterpolista**. Listu odmah inicijalizovati.
-- Javnu metodu **napraviIzvestaj** koja u data fajl "izvestaj.txt" upisuje podatke o onim vaterpolistima iz liste koji su ostvarili makar dva gola i to u formatu: &lt;ime prezime&gt;#&lt;klub&gt;#&lt;broj poena&gt. Podatke o svakom vaterpolisti upisati u poseban red.
+- Javnu metodu **napraviIzvestaj** koja u tekstualni fajl "izvestaj.txt" upisuje podatke o onim vaterpolistima iz liste koji su ostvarili makar dva gola i to u formatu: &lt;ime prezime&gt;#&lt;klub&gt;#&lt;broj poena&gt. Podatke o svakom vaterpolisti upisati u poseban red.
 - Javnu metodu **dodajVaterpolistu** koja dobija tri ulazna parametra: ime i prezime, klub i broj poena koji predstavljaju podatke o vaterpolisti. Metoda unosi novog vaterpolistu u listu samo ako u listi već ne postoji isti vaterpolista. U slučaju da u listi već postoji taj vaterpolista, potrebno je u tekstualni fajl "greske.txt" uneti sve podatke o tom vaterpolisti i upisati u sledeći red fajla poruku "Vec postoji u listi".
 - Javnu metodu **unesiVaterpolisteSaTastature** koja sa tastature učitava podatke o dvadeset dvojici vaterpolista i unosi ih u listu. U slučaju greške (nekog izuzetka) u toku unosa podataka za nekog vaterpolistu, metoda bi trebalo da preskoči unos za tog vaterpolistu, ispiše poruku izuzetka i nastavi sa unosom za preostale vaterpoliste.
