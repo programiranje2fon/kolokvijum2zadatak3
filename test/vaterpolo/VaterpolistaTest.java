@@ -1,7 +1,9 @@
 package vaterpolo;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertNotEquals;
 
 import java.lang.reflect.Modifier;
 
@@ -124,6 +126,11 @@ public class VaterpolistaTest {
 	}
 	
 	@Test
+	public void metoda_equals_nijeDobraKlasa() {
+		assertFalse("Metoda equals() ne vraca false ako se prosledi objekat druge klase.", instance.equals(new Object()));
+	}
+	
+	@Test
 	public void metoda_equals() {
 		instance.setImePrezime("Filip Filipovic");
 		instance.setKlub("Pro Recco");
@@ -137,4 +144,31 @@ public class VaterpolistaTest {
 		assertEquals("Metoda equals() ne vraca vrednost true za prosledjenog vaterpolistu sa istim imenom i prezimenom i klubom, a razlicitim brojem poena.", v1, instance);
 	}
 	
+	@Test
+	public void metoda_equals_razlicitoIme() {
+		instance.setImePrezime("Filip Filipovic");
+		instance.setKlub("Pro Recco");
+		instance.setPoeni(10);
+		
+		Vaterpolista v1 = new Vaterpolista();
+		v1.setImePrezime("Andrija Prlainovic");
+		v1.setKlub("Pro Recco");
+		v1.setPoeni(15);
+		
+		assertNotEquals("Metoda equals() ne vraca vrednost false za prosledjenog vaterpolistu sa razlicitim imenom.", v1, instance);
+	}
+	
+	@Test
+	public void metoda_equals_razlicitNazivKluba() {
+		instance.setImePrezime("Filip Filipovic");
+		instance.setKlub("Pro Recco");
+		instance.setPoeni(10);
+		
+		Vaterpolista v1 = new Vaterpolista();
+		v1.setImePrezime("Filip Filipovic");
+		v1.setKlub("Partizan");
+		v1.setPoeni(15);
+		
+		assertNotEquals("Metoda equals() ne vraca vrednost false za prosledjenog vaterpolistu sa razlicitim nazivima kluba.", v1, instance);
+	}
 }

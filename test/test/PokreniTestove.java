@@ -12,6 +12,7 @@ import org.junit.runner.notification.Failure;
 
 import vaterpolo.VaterpolistaTest;
 import vaterpolo.VaterpoloUtakmicaTest;
+import vaterpolo.exception.VaterpoloExceptionTest;
 
 /**
  * This class executes all tests and prints out the report.
@@ -20,6 +21,7 @@ import vaterpolo.VaterpoloUtakmicaTest;
 public class PokreniTestove {
 
 	public static void main(String[] args) {
+		runTestsForClass(VaterpoloExceptionTest.class);
 		runTestsForClass(VaterpolistaTest.class);
 		runTestsForClass(VaterpoloUtakmicaTest.class);
 	}
