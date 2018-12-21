@@ -10,6 +10,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import ispravka_koda.StringIspisivac3Test;
 import vaterpolo.VaterpolistaTest;
 import vaterpolo.VaterpoloUtakmicaTest;
 import vaterpolo.exception.VaterpoloExceptionTest;
@@ -24,6 +25,7 @@ public class PokreniTestove {
 		runTestsForClass(VaterpoloExceptionTest.class);
 		runTestsForClass(VaterpolistaTest.class);
 		runTestsForClass(VaterpoloUtakmicaTest.class);
+		runTestsForClass(StringIspisivac3Test.class);
 	}
 
 	/**
