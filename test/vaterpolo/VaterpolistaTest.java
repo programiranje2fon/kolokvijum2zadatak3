@@ -125,9 +125,9 @@ public class VaterpolistaTest {
 		assertEquals("Metoda getPoeni() ne vraca vrednost atributa poeni", poeni, instance.getPoeni());
 	}
 	
-	@Test
+	@Test (expected = VaterpoloException.class)
 	public void metoda_equals_nijeDobraKlasa() {
-		assertFalse("Metoda equals() ne vraca false ako se prosledi objekat druge klase.", instance.equals(new Object()));
+		assertFalse("Metoda equals() ne baca izuzetak klase VaterpoloException kada se prosledi objekat druge klase.", instance.equals(new Object()));
 	}
 	
 	@Test

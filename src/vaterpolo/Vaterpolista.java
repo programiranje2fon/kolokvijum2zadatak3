@@ -48,7 +48,7 @@ public class Vaterpolista {
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Vaterpolista))
-			return false;
+			throw new VaterpoloException("Nije prosledjen objekat klase Vaterpolista");
 
 		Vaterpolista v = (Vaterpolista) obj;
 
